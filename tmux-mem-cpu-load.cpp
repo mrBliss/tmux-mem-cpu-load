@@ -251,9 +251,10 @@ std::string mem_string( bool use_colors )
 
   used_mem = total_mem;
 
-  for( unsigned int i = 0; i < 3; i++ )
+  for( unsigned int i = 0; i < 4; i++ )
     {
     getline( meminfo_file, mem_line );
+    if (i == 1) continue;
     line_start_pos = mem_line.find_first_of( ':' );
     line_start_pos++;
     line_end_pos = mem_line.find_first_of( 'k' );
